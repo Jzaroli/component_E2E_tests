@@ -16,7 +16,7 @@ describe('Quiz Component', () => {
     it('starts the quiz and displays the first question', () => {
         cy.mount(<Quiz />); 
         cy.get('button').contains('Start Quiz').click();
-        cy.get('card').should('be.visible');
+        cy.get('.card').should('not.be.empty');
         cy.get('h2').should('not.be.empty');
     });
 
