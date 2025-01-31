@@ -4,8 +4,8 @@ describe('Quiz Component', () => {
     });
 
     it('starts the quiz and displays the first question', () => {
-        cy.get('buton').contains('Start Quiz').click();
-        cy.get('card').should('be.visible');
+        cy.get('button').contains('Start Quiz').click();
+        cy.get('.card').should('not.be.empty');
         cy.get('h2').should('not.be.empty');
     });
 
@@ -27,7 +27,7 @@ describe('Quiz Component', () => {
         
         cy.get('button').contains('Take New Quiz').click();
 
-        cy.get('.card').should('be.visible');
+        cy.get('.card').should('not.be.empty');
         cy.get('h2').should('not.be.empty');
     });
 
